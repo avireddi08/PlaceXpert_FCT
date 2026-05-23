@@ -1,4 +1,4 @@
-const Hero = () => (
+const Hero = ({ onJoinClick, onPortalLogin }) => (
   <section className="relative min-h-[85vh] flex items-center px-20 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-blue-50/50 via-white to-white overflow-hidden">
     <div className="w-1/2 relative z-10">
       {/* Identity Badge */}
@@ -30,10 +30,10 @@ const Hero = () => (
 
       {/* Buttons */}
       <div className="flex gap-5">
-        <button className="bg-[#0a1d37] text-white px-10 py-5 rounded-2xl font-bold text-sm tracking-widest flex items-center gap-3 hover:bg-[#162a4a] transition-all shadow-2xl shadow-blue-900/20 uppercase">
+        <button onClick={onPortalLogin} className="bg-[#0a1d37] text-white px-10 py-5 rounded-2xl font-bold text-sm tracking-widest flex items-center gap-3 hover:bg-[#162a4a] transition-all shadow-2xl shadow-blue-900/20 uppercase">
           Portal Login <span className="text-xl">→</span>
         </button>
-        <button className="bg-white text-[#0a1d37] border-2 border-slate-100 px-10 py-5 rounded-2xl font-bold text-sm tracking-widest flex items-center gap-3 hover:bg-slate-50 transition-all uppercase">
+        <button onClick={onJoinClick} className="bg-white text-[#0a1d37] border-2 border-slate-100 px-10 py-5 rounded-2xl font-bold text-sm tracking-widest flex items-center gap-3 hover:bg-slate-50 transition-all uppercase">
           Join Platform <div className="w-0 h-0 border-y-[6px] border-y-transparent border-l-[8px] border-l-[#0a1d37] ml-1" />
         </button>
       </div>
